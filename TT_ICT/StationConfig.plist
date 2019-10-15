@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>cfg</key>
+	<dict>
+		<key>SWname</key>
+		<string>SMT PCBA TEST</string>
+		<key>SWversion</key>
+		<string>1.1.2</string>
+		<key>MESip</key>
+		<string>10.33.24.23</string>
+		<key>SNlength</key>
+		<string>6</string>
+		<key>PassWord</key>
+		<string>luxshare</string>
+		<key>ProductName</key>
+		<string>H07</string>
+		<key>StationID</key>
+		<string>ITKS_A02-3FAP-05_1_CHECK-SN</string>
+		<key>UnitCount</key>
+		<string>4</string>
+		<key>PDCAenable</key>
+		<string>0</string>
+	</dict>
+	<key>yield</key>
+	<dict>
+		<key>Input</key>
+		<integer>101</integer>
+		<key>Pass</key>
+		<integer>19</integer>
+	</dict>
+	<key>startScripts</key>
+	<array>
+		<string>killall python</string>
+		<string>ls /dev/tty.*</string>
+	</array>
+</dict>
+</plist>

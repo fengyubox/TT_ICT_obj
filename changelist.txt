@@ -1,0 +1,9 @@
+20190112 v1.0.2
+ =>1.first version for multi-testing
+   2.mode-DEBUG will not check SN from router and
+     update result to router, but mode-TEST will
+   3.default 4UP units for testing
+
+20190924 v1.1.2
+ =>1.add load/unload progress display
+   2.add security files signed verify

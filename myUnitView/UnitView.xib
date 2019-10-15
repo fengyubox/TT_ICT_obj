@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="UnitView">
+            <connections>
+                <outlet property="_box" destination="ewB-Q6-jUw" id="3C0-pD-arh"/>
+                <outlet property="_callDetialBtn" destination="TMD-P6-5TY" id="juE-d6-Amu"/>
+                <outlet property="_configBtn" destination="Thu-al-Lba" id="6k0-DX-aQv"/>
+                <outlet property="_progressIndicator1" destination="fxS-Ev-CCu" id="yZg-OX-RI0"/>
+                <outlet property="_selectedBtn" destination="HAT-Ew-pgi" id="gce-tx-5ld"/>
+                <outlet property="_snLabel" destination="Dnb-y5-lW9" id="4pq-Z5-geq"/>
+                <outlet property="_view" destination="Hz6-mo-xeY" id="dhd-72-qzg"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="u6x-HD-ZUM"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView identifier="UnitView" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Slot-" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="ewB-Q6-jUw">
+                    <rect key="frame" x="16" y="20" width="364" height="266"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView" ambiguous="YES" id="Rfn-fF-L1r">
+                        <rect key="frame" x="1" y="1" width="362" height="264"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HAT-Ew-pgi">
+                                <rect key="frame" x="11" y="218" width="159" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Slot-" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="50v-jd-ry8">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system" size="28"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="SelectedBtnAction:" target="-2" id="PjW-Eu-kqe"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dnb-y5-lW9">
+                                <rect key="frame" x="18" y="182" width="325" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="0123456789123456789" id="2kt-G1-VBr">
+                                    <font key="font" metaFont="system" size="25"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="systemPurpleColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="ttc-C6-Hv6">
+                                <rect key="frame" x="20" y="169" width="316" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </box>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TMD-P6-5TY">
+                                <rect key="frame" x="13" y="49" width="333" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="squareTextured" title="Ready" bezelStyle="texturedSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="yqG-Eg-43K">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="29"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="callDetailAction:" target="-2" id="RVS-f0-E0F"/>
+                                </connections>
+                            </button>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="fxS-Ev-CCu">
+                                <rect key="frame" x="170" y="49" width="16" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </progressIndicator>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Thu-al-Lba">
+                                <rect key="frame" x="312" y="232" width="40" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="settings" imagePosition="overlaps" alignment="center" transparent="YES" imageScaling="proportionallyDown" inset="2" id="70S-gO-cRD">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="configBtnAction:" target="-2" id="4fi-4I-jQf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <font key="titleFont" size="12" name=".AppleSystemUIFont"/>
+                </box>
+            </subviews>
+            <point key="canvasLocation" x="93" y="170"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="settings" width="284" height="289"/>
+    </resources>
+</document>
