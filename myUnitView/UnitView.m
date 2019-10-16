@@ -17,8 +17,25 @@ typedef NS_ENUM(NSInteger, ORSSerialRequestType) {
 };
 
 @interface UnitView ()
-//testplan data
-@property (nonatomic,assign) TP_DATA testplan_data;
+{
+    //testplan data
+    NSMutableArray *itemsData;
+    NSMutableArray *groupData;
+    NSMutableArray *funcData;
+    NSMutableArray *commandsData;
+    NSMutableArray *recSuffixData;
+    NSMutableArray *valueTypeData;
+    NSMutableArray *saveValueData;
+    NSMutableArray *lowData;
+    NSMutableArray *referValueData;
+    NSMutableArray *upData;
+    NSMutableArray *unitData;
+    NSMutableArray *timeOutData;
+    NSMutableArray *delayData;
+    NSMutableArray *exitEnableData;
+    NSMutableArray *skipData;
+    NSMutableArray *pdcaFlag;
+}
 //For test config plist
 @property (nonatomic,strong) NSMutableDictionary *testSet;
 @property (nonatomic,strong) NSMutableDictionary *cfgSet;
@@ -95,67 +112,67 @@ typedef NS_ENUM(NSInteger, ORSSerialRequestType) {
     
     //NSArray *line=[csvContent objectAtIndex:0];
     //NSLog(@"%@", line);
-    _testplan_data.itemsData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
-    _testplan_data.groupData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
-    _testplan_data.funcData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
-    _testplan_data.commandsData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
-    _testplan_data.recSuffixData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
-    _testplan_data.valueTypeData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
-    _testplan_data.saveValueData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
-    _testplan_data.lowData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
-    _testplan_data.referValueData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
-    _testplan_data.upData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
-    _testplan_data.unitData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
-    _testplan_data.timeOutData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
-    _testplan_data.delayData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
-    _testplan_data.exitEnableData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
-    _testplan_data.skipData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
-    _testplan_data.pdcaFlag=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
+    itemsData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
+    groupData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
+    funcData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
+    commandsData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
+    recSuffixData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
+    valueTypeData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
+    saveValueData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
+    lowData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
+    referValueData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
+    upData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
+    unitData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
+    timeOutData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
+    delayData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
+    exitEnableData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
+    skipData=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
+    pdcaFlag=[[NSMutableArray alloc] initWithCapacity:[csvContent count]];
     
     for (int index=0; index<[csvContent count]; index++) {
         NSArray *line=[csvContent objectAtIndex:index];
         //Test Data:     ||      TestPlan:
-        [_testplan_data.itemsData addObject:line[TP_TESTITEMS_INDEX]];
-        [_testplan_data.groupData addObject:line[TP_GROUP_INDEX]];
-        [_testplan_data.funcData addObject:line[TP_FUNC_INDEX]];
-        [_testplan_data.commandsData addObject:line[TP_CMD_INDEX]];
-        [_testplan_data.recSuffixData addObject:line[TP_RECSUF_INDEX]];
-        [_testplan_data.valueTypeData addObject:line[TP_VALTYP_INDEX]];
-        [_testplan_data.saveValueData addObject:line[TP_VALSAV_INDEX]];
-        [_testplan_data.lowData addObject:line[TP_LOW_INDEX]];
-        [_testplan_data.referValueData addObject:line[TP_REFERENCE_INDEX]];
-        [_testplan_data.upData addObject:line[TP_UP_INDEX]];
-        [_testplan_data.unitData addObject:line[TP_UNIT_INDEX]];
-        [_testplan_data.timeOutData addObject:line[TP_TIMEOUT_INDEX]];
-        [_testplan_data.delayData addObject:line[TP_DELAY_INDEX]];
-        [_testplan_data.exitEnableData addObject:line[TP_EXITENABLE_INDEX]];
-        [_testplan_data.skipData addObject:line[TP_SKIP_INDEX]];
-        [_testplan_data.pdcaFlag addObject:line[TP_PDCA_INDEX]];
+        [itemsData addObject:line[TP_TESTITEMS_INDEX]];
+        [groupData addObject:line[TP_GROUP_INDEX]];
+        [funcData addObject:line[TP_FUNC_INDEX]];
+        [commandsData addObject:line[TP_CMD_INDEX]];
+        [recSuffixData addObject:line[TP_RECSUF_INDEX]];
+        [valueTypeData addObject:line[TP_VALTYP_INDEX]];
+        [saveValueData addObject:line[TP_VALSAV_INDEX]];
+        [lowData addObject:line[TP_LOW_INDEX]];
+        [referValueData addObject:line[TP_REFERENCE_INDEX]];
+        [upData addObject:line[TP_UP_INDEX]];
+        [unitData addObject:line[TP_UNIT_INDEX]];
+        [timeOutData addObject:line[TP_TIMEOUT_INDEX]];
+        [delayData addObject:line[TP_DELAY_INDEX]];
+        [exitEnableData addObject:line[TP_EXITENABLE_INDEX]];
+        [skipData addObject:line[TP_SKIP_INDEX]];
+        [pdcaFlag addObject:line[TP_PDCA_INDEX]];
     }
 }
 -(NSString *)getCsvTitle{
     
     
     NSString *csvTitle = @"SN--->,Result,ErrorCode,TesterID,startTime,endTime,";
-    for(NSString *item in _testplan_data.itemsData){
+    for(NSString *item in itemsData){
         csvTitle = [csvTitle stringByAppendingString:item];
         csvTitle = [csvTitle stringByAppendingString:@","];
     }
     csvTitle = [csvTitle stringByAppendingString:@"\r\n"];
     csvTitle = [csvTitle stringByAppendingString:@"LowerLimit--->,,,,,,"];
-    for(NSString *item in _testplan_data.lowData){
+    for(NSString *item in lowData){
         csvTitle = [csvTitle stringByAppendingString:item];
         csvTitle = [csvTitle stringByAppendingString:@","];
     }
     csvTitle = [csvTitle stringByAppendingString:@"\r\n"];
     csvTitle = [csvTitle stringByAppendingString:@"UpperLimit--->,,,,,,"];
-    for(NSString *item in _testplan_data.upData){
+    for(NSString *item in upData){
         csvTitle = [csvTitle stringByAppendingString:item];
         csvTitle = [csvTitle stringByAppendingString:@","];
     }
     csvTitle = [csvTitle stringByAppendingString:@"\r\n"];
     csvTitle = [csvTitle stringByAppendingString:@"MeasurementUnit--->,,,,,,"];
-    for(NSString *item in _testplan_data.unitData){
+    for(NSString *item in unitData){
         csvTitle = [csvTitle stringByAppendingString:item];
         csvTitle = [csvTitle stringByAppendingString:@","];
     }
@@ -279,7 +296,7 @@ typedef NS_ENUM(NSInteger, ORSSerialRequestType) {
     
     
     NSString *_Feedback=@"";
-    for (int i=0; i<[_testplan_data.itemsData count]; i++) {
+    for (int i=0; i<[itemsData count]; i++) {
         _TASK_KEY_isOK = NO;
         _SYNC_TASK_isDONE = NO;
         _SYNC_TASK_RESULT = @"NG";
@@ -288,22 +305,22 @@ typedef NS_ENUM(NSInteger, ORSSerialRequestType) {
         [_detailView updateTVWithTesting];
         [self myPrintf:@"========================================="];
         [NSThread sleepForTimeInterval:0.01f];
-        NSString *thisItem=[_testplan_data.itemsData objectAtIndex:i];
+        NSString *thisItem=[itemsData objectAtIndex:i];
         NSString *msg =[NSString stringWithFormat:@"Item:%@",thisItem];
         [self myPrintf:msg];
-        NSString *thisTag=[_testplan_data.groupData objectAtIndex:i];
-        NSString *thisConnecter=[_testplan_data.funcData objectAtIndex:i];
-        NSString *thisCommand=[_testplan_data.commandsData objectAtIndex:i];
-        NSString *thisJudgeStyle=[_testplan_data.valueTypeData objectAtIndex:i];
-        NSString *thisResponse=[_testplan_data.referValueData objectAtIndex:i];
-        NSString *thisLowLimit=[_testplan_data.lowData objectAtIndex:i];
-        NSString *thisRefValue=[_testplan_data.referValueData objectAtIndex:i];
-        NSString *thisUpLimit=[_testplan_data.upData objectAtIndex:i];
-        NSString *thisUnit=[_testplan_data.unitData objectAtIndex:i];
+        NSString *thisTag=[groupData objectAtIndex:i];
+        NSString *thisConnecter=[funcData objectAtIndex:i];
+        NSString *thisCommand=[commandsData objectAtIndex:i];
+        NSString *thisJudgeStyle=[valueTypeData objectAtIndex:i];
+        NSString *thisResponse=[referValueData objectAtIndex:i];
+        NSString *thisLowLimit=[lowData objectAtIndex:i];
+        NSString *thisRefValue=[referValueData objectAtIndex:i];
+        NSString *thisUpLimit=[upData objectAtIndex:i];
+        NSString *thisUnit=[unitData objectAtIndex:i];
         
-        float thisTimeOut=[[_testplan_data.timeOutData objectAtIndex:i] floatValue];
-        float thisDelay=[[_testplan_data.delayData objectAtIndex:i] floatValue];
-        BOOL isSkiped=[[_testplan_data.skipData objectAtIndex:i] boolValue];
+        float thisTimeOut=[[timeOutData objectAtIndex:i] floatValue];
+        float thisDelay=[[delayData objectAtIndex:i] floatValue];
+        BOOL isSkiped=[[skipData objectAtIndex:i] boolValue];
         
         msg=[NSString stringWithFormat:@"send:%@",thisCommand];
         [self myPrintf:msg];

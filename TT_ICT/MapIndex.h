@@ -27,22 +27,4 @@
 //security verify keys
 #define mainKey @"280f8bb8c43d532f389ef0e2a5321220b0782b065205dcdfcb8d8f02ed5115b9"
 #define subKey @"CC0A69779E15780ADAE46C45EB451A23"
-//test plan struct
-typedef struct TESTPLAN_DATA {
-    NSMutableArray *itemsData;
-    NSMutableArray *groupData;
-    NSMutableArray *funcData;
-    NSMutableArray *commandsData;
-    NSMutableArray *recSuffixData;
-    NSMutableArray *valueTypeData;
-    NSMutableArray *saveValueData;
-    NSMutableArray *lowData;
-    NSMutableArray *referValueData;
-    NSMutableArray *upData;
-    NSMutableArray *unitData;
-    NSMutableArray *timeOutData;
-    NSMutableArray *delayData;
-    NSMutableArray *exitEnableData;
-    NSMutableArray *skipData;
-    NSMutableArray *pdcaFlag;
-} TP_DATA;
+

@@ -120,7 +120,7 @@
     
     NSString *rawfilePath=[[NSBundle mainBundle] resourcePath];
     NSString *cmd=[rawfilePath stringByAppendingPathComponent:@"/ExtendScripts/myPyServer.py"];
-    cmd=[@"/Users/weidongcao/anaconda3/bin/python " stringByAppendingString:cmd];
+    cmd=[@"python " stringByAppendingString:cmd];
     [self myPrintf:cmd,nil];
     //const char *cmdC=[cmd UTF8String];
     //system(cmdC);
